@@ -6,13 +6,13 @@ import wmi
 
 def parse_args():
     parser = ArgumentParser()
-    sort_choices = ['pid', 'name', 'status', 'path']
+    sort_choices = ['pid', 'name', 'state', 'path']
     parser.add_argument('-s',
                         metavar='--sort',
                         action='store',
                         default='pid',
                         choices=sort_choices,
-                        help="specify a sorting method: pid/name/status/path")
+                        help="specify a sorting method: pid/name/state/path")
     parser.add_argument('-r',
                         action='store_true',
                         help="include this flag to reverse sort")
